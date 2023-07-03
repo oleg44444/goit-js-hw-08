@@ -22,13 +22,6 @@ function createImagesMarkup(galleryItems) {
 const imageMarkup = createImagesMarkup(galleryItems);
 gallery.innerHTML = imageMarkup;
 
-gallery.addEventListener('click', onImageClick);
-
-function onImageClick(event) {
-  event.preventDefault();
-  const target = event.target;
-}
-
 const lightbox = new SimpleLightbox('.gallery a', {
   captionDelay: 250,
   captionsData: 'alt',

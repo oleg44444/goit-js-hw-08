@@ -21,10 +21,17 @@ function onFormSubmit(evt) {
   console.log(formData);
 }
 
-function populateForm(evt) {
-  const savedMessage = localStorage.getItem(STORAGE_KEY);
+function populateForm() {
+  const savedMessage = JSON.parse(localStorage.getItem(STORAGE_KEY));
   if (savedMessage) {
-    evt.target.value = JSON.parse(savedMessage);
+    const inputElements = form.querySelectorAll('input, textarea');
+    inputElements.forEach(inputElement => {
+      const fieldName = inputElement.name;
+      if (savedMessage.hasOwnProperty(fieldName)) {
+        inputElement.value = savedMessage[fieldName];
+      }
+    });
   }
 }
+
 populateForm();
