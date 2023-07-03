@@ -4,5 +4,5 @@ var t="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof self?self:"u
             <img class="gallery__image" src="${t}" alt="${o}" />
           </a>
         </li>
-      `).join("");c.innerHTML=h,c.addEventListener("click",function(t){t.preventDefault(),t.target}),new(function(t){return t&&t.__esModule?t.default:t}(o))(".gallery a",{captionDelay:250,captionsData:"alt"}),console.log(e);
-//# sourceMappingURL=01-gallery.197a1fc8.js.map
+      `).join("");c.innerHTML=h,new(function(t){return t&&t.__esModule?t.default:t}(o))(".gallery a",{captionDelay:250,captionsData:"alt"}),console.log(e);
+//# sourceMappingURL=01-gallery.54954ddb.js.map
